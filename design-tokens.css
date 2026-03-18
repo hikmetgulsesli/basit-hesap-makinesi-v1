@@ -1,0 +1,134 @@
+/* design-tokens.css -- Design tokens for Basit Hesap Makinesi */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+:root {
+  /* ========================================
+     COLORS - Dark Theme Palette
+     ======================================== */
+  
+  /* Background Colors */
+  --color-bg-primary: #1a1a2e;
+  --color-bg-secondary: #16213e;
+  --color-bg-display: #0f0f23;
+  
+  /* Button Colors */
+  --color-button-default: #1a1a2e;
+  --color-button-default-hover: #0f3460;
+  --color-button-operator: #0f3460;
+  --color-button-operator-hover: #1a4a7a;
+  --color-button-function-hover: #2a1a2e;
+  
+  /* Accent Colors */
+  --color-accent: #e94560;
+  --color-accent-hover: #ff6b6b;
+  
+  /* Text Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8b8b9e;
+  --color-text-accent: #e94560;
+  
+  /* Border Colors */
+  --color-border-display: #0f3460;
+  --color-border-card: rgba(15, 52, 96, 0.5);
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+  
+  /* Font Families */
+  --font-heading: 'Manrope', 'Inter', sans-serif;
+  --font-body: 'Manrope', 'Inter', 'Source Sans 3', sans-serif;
+  --font-display: 'Manrope', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-2xl: 2.5rem;
+  --font-size-display: 3rem;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  /* ========================================
+     SPACING
+     ======================================== */
+  
+  /* Base spacing unit: 4px */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  
+  /* Calculator-specific spacing */
+  --calc-padding: 24px;
+  --calc-gap: 12px;
+  --display-padding: 20px;
+  --button-padding: 16px;
+
+  /* ========================================
+     BORDER RADIUS
+     ======================================== */
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+  
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.4);
+  --shadow-button: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+  
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.15s ease;
+  --transition-slow: 0.2s ease;
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+  
+  --calculator-max-width: 400px;
+  --display-min-height: 80px;
+  --button-grid-columns: 4;
+}
+
+/* ========================================
+   RESPONSIVE TOKENS
+   ======================================== */
+
+@media (max-width: 480px) {
+  :root {
+    --calc-padding: 16px;
+    --calc-gap: 10px;
+    --display-padding: 16px;
+    --button-padding: 14px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --font-size-display: 2rem;
+  }
+}

@@ -1,0 +1,10 @@
+=== US-001: Project setup and file structure ===
+COMPLETED: 2026-03-18T13:51:00Z
+FILES CHANGED: index.html, style.css, script.js, README.md
+KEY DECISIONS: 
+- Used modern dark theme design with gradient background
+- Implemented responsive grid layout for calculator buttons
+- Added keyboard support for better UX
+- Used safe evaluation with Function constructor instead of eval()
+DEPENDENCIES ADDED: None (vanilla JS project)
+PR_URL: https://github.com/hikmetgulsesli/basit-hesap-makinesi-v1/pull/2

@@ -1,12 +1,14 @@
 // Basit Hesap Makinesi - JavaScript
 
-let currentInput = '';
+let currentInput = '0';
 let shouldResetDisplay = false;
 
-const resultDisplay = document.getElementById('result');
+const displayElement = document.getElementById('display-screen');
 
 function updateDisplay() {
-    resultDisplay.value = currentInput || '';
+    displayElement.textContent = currentInput || '0';
+    // Scroll to the end of the display
+    displayElement.scrollLeft = displayElement.scrollWidth;
 }
 
 function appendNumber(num) {
@@ -15,26 +17,33 @@ function appendNumber(num) {
         shouldResetDisplay = false;
     }
     
-    // Prevent multiple decimal points
-    if (num === '.' && currentInput.includes('.')) {
-        return;
+    // Prevent multiple decimal points in the same number
+    if (num === '.') {
+        const parts = currentInput.split(/[+\-*/%]/);
+        const lastPart = parts[parts.length - 1];
+        if (lastPart.includes('.')) {
+            return;
+        }
     }
     
     // Prevent leading zeros
-    if (num === '0' && currentInput === '0') {
-        return;
+    if (currentInput === '0' && num !== '.') {
+        currentInput = num;
+    } else {
+        currentInput += num;
     }
     
-    currentInput += num;
     updateDisplay();
 }
 
 function appendOperator(op) {
-    if (currentInput === '') return;
+    if (currentInput === '') {
+        currentInput = '0';
+    }
     
     // Replace last operator if one exists
     const lastChar = currentInput.slice(-1);
-    if ('+-*/'.includes(lastChar)) {
+    if ('+-*/%'.includes(lastChar)) {
         currentInput = currentInput.slice(0, -1);
     }
     
@@ -44,26 +53,30 @@ function appendOperator(op) {
 }
 
 function clearDisplay() {
-    currentInput = '';
+    currentInput = '0';
     shouldResetDisplay = false;
     updateDisplay();
 }
 
 function deleteLast() {
-    currentInput = currentInput.slice(0, -1);
+    if (currentInput.length > 1) {
+        currentInput = currentInput.slice(0, -1);
+    } else {
+        currentInput = '0';
+    }
     updateDisplay();
 }
 
 function calculate() {
-    if (currentInput === '') return;
+    if (currentInput === '' || currentInput === '0') return;
     
     try {
         // Replace display operators with JavaScript operators
-        let expression = currentInput.replace(/×/g, '*');
+        let expression = currentInput.replace(/×/g, '*').replace(/÷/g, '/');
         
         // Prevent evaluation ending with operator
         const lastChar = expression.slice(-1);
-        if ('+-*/'.includes(lastChar)) {
+        if ('+-*/%'.includes(lastChar)) {
             expression = expression.slice(0, -1);
         }
         
@@ -74,11 +87,12 @@ function calculate() {
         if (!isFinite(result)) {
             currentInput = 'Hata';
         } else {
-            currentInput = String(result);
+            // Format result: limit decimals and remove trailing zeros
+            currentInput = String(parseFloat(result.toFixed(8)));
         }
         
         shouldResetDisplay = true;
-    } catch (error) {
+    } catch {
         currentInput = 'Hata';
         shouldResetDisplay = true;
     }
@@ -89,17 +103,25 @@ function calculate() {
 // Keyboard support
 document.addEventListener('keydown', (e) => {
     if (e.key >= '0' && e.key <= '9') {
+        e.preventDefault();
         appendNumber(e.key);
     } else if (e.key === '.') {
+        e.preventDefault();
         appendNumber('.');
     } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+        e.preventDefault();
         appendOperator(e.key);
     } else if (e.key === 'Enter' || e.key === '=') {
         e.preventDefault();
         calculate();
     } else if (e.key === 'Escape' || e.key === 'c' || e.key === 'C') {
+        e.preventDefault();
         clearDisplay();
     } else if (e.key === 'Backspace') {
+        e.preventDefault();
         deleteLast();
+    } else if (e.key === '%') {
+        e.preventDefault();
+        appendOperator('%');
     }
 });
