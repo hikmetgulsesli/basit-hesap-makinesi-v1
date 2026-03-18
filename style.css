@@ -1,3 +1,6 @@
+/* Import design tokens */
+@import url('stitch/design-tokens.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,75 +8,75 @@
 }
 
 body {
-  font-family: 'Manrope', 'Inter', 'Segoe UI', system-ui, sans-serif;
-  background-color: #1a1a2e;
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: var(--space-5);
 }
 
 .calculator {
-  background-color: #16213e;
-  border-radius: 20px;
-  padding: 24px;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--calc-padding);
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  max-width: var(--calculator-max-width);
+  box-shadow: var(--shadow-card);
 }
 
 .display {
-  background-color: #0f0f23;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
+  background-color: var(--color-bg-display);
+  border-radius: var(--radius-md);
+  padding: var(--display-padding);
+  margin-bottom: var(--space-5);
   text-align: right;
-  border: 1px solid #0f3460;
-  min-height: 80px;
+  border: 1px solid var(--color-border-display);
+  min-height: var(--display-min-height);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .display-previous {
-  color: #8b8b9e;
-  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
   min-height: 24px;
   word-wrap: break-word;
   word-break: break-all;
 }
 
 .display-current {
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
   word-wrap: break-word;
   word-break: break-all;
-  line-height: 1.2;
+  line-height: var(--line-height-tight);
 }
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(var(--button-grid-columns), 1fr);
+  gap: var(--calc-gap);
 }
 
 .btn {
-  background-color: #1a1a2e;
+  background-color: var(--color-button-default);
   border: none;
-  border-radius: 12px;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 16px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--button-padding);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color var(--transition-normal), transform var(--transition-fast);
   font-family: inherit;
 }
 
 .btn:hover {
-  background-color: #0f3460;
+  background-color: var(--color-button-default-hover);
 }
 
 .btn:active {
@@ -81,33 +84,33 @@ body {
 }
 
 .btn:focus {
-  outline: 2px solid #e94560;
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
 .btn-operator {
-  background-color: #0f3460;
+  background-color: var(--color-button-operator);
 }
 
 .btn-operator:hover {
-  background-color: #1a4a7a;
+  background-color: var(--color-button-operator-hover);
 }
 
 .btn-function {
-  color: #e94560;
+  color: var(--color-text-accent);
 }
 
 .btn-function:hover {
-  background-color: #2a1a2e;
+  background-color: var(--color-button-function-hover);
 }
 
 .btn-equals {
-  background-color: #e94560;
+  background-color: var(--color-accent);
   grid-row: span 2;
 }
 
 .btn-equals:hover {
-  background-color: #ff6b6b;
+  background-color: var(--color-accent-hover);
 }
 
 .btn-zero {
@@ -117,22 +120,22 @@ body {
 /* Responsive */
 @media (max-width: 480px) {
   .calculator {
-    padding: 16px;
-    border-radius: 16px;
+    padding: var(--calc-padding);
+    border-radius: var(--radius-lg);
   }
 
   .display {
-    padding: 16px;
+    padding: var(--display-padding);
     min-height: 70px;
   }
 
   .display-current {
-    font-size: 2rem;
+    font-size: var(--font-size-xl);
   }
 
   .btn {
-    padding: 14px;
-    font-size: 1.25rem;
-    border-radius: 10px;
+    padding: var(--button-padding);
+    font-size: var(--font-size-md);
+    border-radius: var(--radius-md);
   }
 }
