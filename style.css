@@ -1,141 +1,103 @@
-/* Import design tokens */
-@import url('stitch/design-tokens.css');
+/* Basit Hesap Makinesi - Styles */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-bg-primary);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--space-5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculator {
-  background-color: var(--color-bg-secondary);
-  border-radius: var(--radius-xl);
-  padding: var(--calc-padding);
-  width: 100%;
-  max-width: var(--calculator-max-width);
-  box-shadow: var(--shadow-card);
+    background: #1a1a2e;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    width: 320px;
 }
 
 .display {
-  background-color: var(--color-bg-display);
-  border-radius: var(--radius-md);
-  padding: var(--display-padding);
-  margin-bottom: var(--space-5);
-  text-align: right;
-  border: 1px solid var(--color-border-display);
-  min-height: var(--display-min-height);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+    margin-bottom: 20px;
 }
 
-.display-previous {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  min-height: 24px;
-  word-wrap: break-word;
-  word-break: break-all;
+.display input {
+    width: 100%;
+    height: 70px;
+    background: #16213e;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 20px;
+    outline: none;
 }
 
-.display-current {
-  color: var(--color-text-primary);
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
-  word-wrap: break-word;
-  word-break: break-all;
-  line-height: var(--line-height-tight);
+.display input::placeholder {
+    color: #888;
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: repeat(var(--button-grid-columns), 1fr);
-  gap: var(--calc-gap);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
 .btn {
-  background-color: var(--color-button-default);
-  border: none;
-  border-radius: var(--radius-md);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  padding: var(--button-padding);
-  cursor: pointer;
-  transition: background-color var(--transition-normal), transform var(--transition-fast);
-  font-family: inherit;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #0f3460;
+    color: #fff;
 }
 
 .btn:hover {
-  background-color: var(--color-button-default-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn:active {
-  transform: translateY(2px);
+    transform: translateY(0);
 }
 
-.btn:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+.clear {
+    background: #e94560;
 }
 
-.btn-operator {
-  background-color: var(--color-button-operator);
+.clear:hover {
+    background: #ff6b6b;
 }
 
-.btn-operator:hover {
-  background-color: var(--color-button-operator-hover);
+.operator {
+    background: #533483;
 }
 
-.btn-function {
-  color: var(--color-text-accent);
+.operator:hover {
+    background: #7b68ee;
 }
 
-.btn-function:hover {
-  background-color: var(--color-button-function-hover);
+.equals {
+    background: #00d9ff;
+    color: #1a1a2e;
+    grid-row: span 2;
+    height: auto;
 }
 
-.btn-equals {
-  background-color: var(--color-accent);
-  grid-row: span 2;
+.equals:hover {
+    background: #80eeff;
 }
 
-.btn-equals:hover {
-  background-color: var(--color-accent-hover);
-}
-
-.btn-zero {
-  grid-column: span 2;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .calculator {
-    padding: var(--calc-padding);
-    border-radius: var(--radius-lg);
-  }
-
-  .display {
-    padding: var(--display-padding);
-    min-height: 70px;
-  }
-
-  .display-current {
-    font-size: var(--font-size-xl);
-  }
-
-  .btn {
-    padding: var(--button-padding);
-    font-size: var(--font-size-md);
-    border-radius: var(--radius-md);
-  }
+.zero {
+    grid-column: span 2;
 }
