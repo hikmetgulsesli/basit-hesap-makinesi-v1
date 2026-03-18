@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator {
+  background-color: #16213e;
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  background-color: #0f0f23;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  border: 1px solid #0f3460;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.display-previous {
+  color: #8b8b9e;
+  font-size: 1rem;
+  min-height: 24px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.display-current {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.2;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  background-color: #1a1a2e;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: #0f3460;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn:focus {
+  outline: 2px solid #e94560;
+  outline-offset: 2px;
+}
+
+.btn-operator {
+  background-color: #0f3460;
+}
+
+.btn-operator:hover {
+  background-color: #1a4a7a;
+}
+
+.btn-function {
+  color: #e94560;
+}
+
+.btn-function:hover {
+  background-color: #2a1a2e;
+}
+
+.btn-equals {
+  background-color: #e94560;
+  grid-row: span 2;
+}
+
+.btn-equals:hover {
+  background-color: #ff6b6b;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .display {
+    padding: 16px;
+    min-height: 70px;
+  }
+
+  .display-current {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 14px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+  }
+}

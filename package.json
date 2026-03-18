@@ -1,0 +1,25 @@
+{
+  "name": "basit-hesap-makinesi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hikmetgulsesli/basit-hesap-makinesi-v1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hikmetgulsesli/basit-hesap-makinesi-v1/issues"
+  },
+  "homepage": "https://github.com/hikmetgulsesli/basit-hesap-makinesi-v1#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3"
+  }
+}

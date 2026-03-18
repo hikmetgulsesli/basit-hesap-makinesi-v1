@@ -1,0 +1,197 @@
+[
+  {
+    "screenId": "050450162c8441fe9391c2677ca26f7c",
+    "screenTitle": "Modern Dark Calculator",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "C",
+        "line": 65
+      },
+      {
+        "type": "button",
+        "label": "⌫",
+        "line": 66
+      },
+      {
+        "type": "button",
+        "label": "÷",
+        "line": 67
+      },
+      {
+        "type": "button",
+        "label": "×",
+        "line": 68
+      },
+      {
+        "type": "button",
+        "label": "7",
+        "line": 70
+      },
+      {
+        "type": "button",
+        "label": "8",
+        "line": 71
+      },
+      {
+        "type": "button",
+        "label": "9",
+        "line": 72
+      },
+      {
+        "type": "button",
+        "label": "-",
+        "line": 73
+      },
+      {
+        "type": "button",
+        "label": "4",
+        "line": 75
+      },
+      {
+        "type": "button",
+        "label": "5",
+        "line": 76
+      },
+      {
+        "type": "button",
+        "label": "6",
+        "line": 77
+      },
+      {
+        "type": "button",
+        "label": "+",
+        "line": 78
+      },
+      {
+        "type": "button",
+        "label": "1",
+        "line": 80
+      },
+      {
+        "type": "button",
+        "label": "2",
+        "line": 81
+      },
+      {
+        "type": "button",
+        "label": "3",
+        "line": 82
+      },
+      {
+        "type": "button",
+        "label": "=",
+        "line": 84
+      },
+      {
+        "type": "button",
+        "label": "0",
+        "line": 86
+      },
+      {
+        "type": "button",
+        "label": ".",
+        "line": 87
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "C",
+        "line": 65
+      },
+      {
+        "type": "button",
+        "label": "⌫",
+        "line": 66
+      },
+      {
+        "type": "button",
+        "label": "÷",
+        "line": 67
+      },
+      {
+        "type": "button",
+        "label": "×",
+        "line": 68
+      },
+      {
+        "type": "button",
+        "label": "7",
+        "line": 70
+      },
+      {
+        "type": "button",
+        "label": "8",
+        "line": 71
+      },
+      {
+        "type": "button",
+        "label": "9",
+        "line": 72
+      },
+      {
+        "type": "button",
+        "label": "-",
+        "line": 73
+      },
+      {
+        "type": "button",
+        "label": "4",
+        "line": 75
+      },
+      {
+        "type": "button",
+        "label": "5",
+        "line": 76
+      },
+      {
+        "type": "button",
+        "label": "6",
+        "line": 77
+      },
+      {
+        "type": "button",
+        "label": "+",
+        "line": 78
+      },
+      {
+        "type": "button",
+        "label": "1",
+        "line": 80
+      },
+      {
+        "type": "button",
+        "label": "2",
+        "line": 81
+      },
+      {
+        "type": "button",
+        "label": "3",
+        "line": 82
+      },
+      {
+        "type": "button",
+        "label": "=",
+        "line": 84
+      },
+      {
+        "type": "button",
+        "label": "0",
+        "line": 86
+      },
+      {
+        "type": "button",
+        "label": ".",
+        "line": 87
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 18,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]

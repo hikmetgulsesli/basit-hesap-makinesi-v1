@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basit Hesap Makinesi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" aria-live="polite">
+      <div class="display-previous" id="display-previous"></div>
+      <div class="display-current" id="display-current">0</div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-function" data-action="clear" aria-label="Temizle">C</button>
+      <button class="btn btn-function" data-action="backspace" aria-label="Sil">⌫</button>
+      <button class="btn btn-function" data-action="operator" data-value="%" aria-label="Yüzde">%</button>
+      <button class="btn btn-operator" data-action="operator" data-value="÷" aria-label="Bölme">÷</button>
+      
+      <button class="btn" data-action="number" data-value="7" aria-label="Yedi">7</button>
+      <button class="btn" data-action="number" data-value="8" aria-label="Sekiz">8</button>
+      <button class="btn" data-action="number" data-value="9" aria-label="Dokuz">9</button>
+      <button class="btn btn-operator" data-action="operator" data-value="×" aria-label="Çarpma">×</button>
+      
+      <button class="btn" data-action="number" data-value="4" aria-label="Dört">4</button>
+      <button class="btn" data-action="number" data-value="5" aria-label="Beş">5</button>
+      <button class="btn" data-action="number" data-value="6" aria-label="Altı">6</button>
+      <button class="btn btn-operator" data-action="operator" data-value="-" aria-label="Çıkarma">-</button>
+      
+      <button class="btn" data-action="number" data-value="1" aria-label="Bir">1</button>
+      <button class="btn" data-action="number" data-value="2" aria-label="İki">2</button>
+      <button class="btn" data-action="number" data-value="3" aria-label="Üç">3</button>
+      <button class="btn btn-operator" data-action="operator" data-value="+" aria-label="Toplama">+</button>
+      
+      <button class="btn btn-zero" data-action="number" data-value="0" aria-label="Sıfır">0</button>
+      <button class="btn" data-action="decimal" aria-label="Ondalık">.</button>
+      <button class="btn btn-equals" data-action="calculate" aria-label="Eşittir">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
